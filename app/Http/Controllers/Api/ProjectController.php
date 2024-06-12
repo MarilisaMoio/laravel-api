@@ -27,7 +27,7 @@ class ProjectController extends Controller
         if($project){
             $data = [
                 'success' => true,
-                'results' => $project
+                'project' => $project
             ];
         } else {
             $data = [
@@ -36,6 +36,6 @@ class ProjectController extends Controller
             ];
         }
 
-        return response()->json([$data]);
+        return response()->json($data);
     }
 }
